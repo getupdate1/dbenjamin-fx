@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aether Capital",
+      "hasCanvas": false,
+      "bodyTextLen": 1253,
+      "bodyTextHash": "b2af72ceb2c330aff10bc0a0a202fbd42428289238fdbb8f53c92dc62f1520a9",
+      "bodyTextPrefix": "Æ Aether Capital Home Approach Inquire PRIVATE INVESTMENT PARTNE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aether Capital",
+      "hasCanvas": false,
+      "bodyTextLen": 1253,
+      "bodyTextHash": "b2af72ceb2c330aff10bc0a0a202fbd42428289238fdbb8f53c92dc62f1520a9",
+      "bodyTextPrefix": "Æ Aether Capital Home Approach Inquire PRIVATE INVESTMENT PARTNE",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
