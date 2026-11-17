@@ -10,9 +10,21 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AcademyRouteImport } from './routes/academy'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as ApproachRouteImport } from './routes/approach'
+import { Route as CalendarRouteImport } from './routes/calendar'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DeskRouteImport } from './routes/desk'
 import { Route as InquireRouteImport } from './routes/inquire'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as MarketsRouteImport } from './routes/markets'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as RiskRouteImport } from './routes/risk'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const IndexRoute = IndexRouteImport.update({
@@ -20,9 +32,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcademyRoute = AcademyRouteImport.update({
+  id: '/academy',
+  path: '/academy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApproachRoute = ApproachRouteImport.update({
   id: '/approach',
   path: '/approach',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CalendarRoute = CalendarRouteImport.update({
+  id: '/calendar',
+  path: '/calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeskRoute = DeskRouteImport.update({
+  id: '/desk',
+  path: '/desk',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InquireRoute = InquireRouteImport.update({
@@ -35,6 +77,36 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MarketsRoute = MarketsRouteImport.update({
+  id: '/markets',
+  path: '/markets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RiskRoute = RiskRouteImport.update({
+  id: '/risk',
+  path: '/risk',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
   id: '/api/auth/$',
   path: '/api/auth/$',
@@ -43,39 +115,139 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
+  '/admin': typeof AdminRoute
   '/approach': typeof ApproachRoute
+  '/calendar': typeof CalendarRoute
+  '/contact': typeof ContactRoute
+  '/desk': typeof DeskRoute
   '/inquire': typeof InquireRoute
   '/login': typeof LoginRoute
+  '/markets': typeof MarketsRoute
+  '/privacy': typeof PrivacyRoute
+  '/research': typeof ResearchRoute
+  '/risk': typeof RiskRoute
+  '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
+  '/admin': typeof AdminRoute
   '/approach': typeof ApproachRoute
+  '/calendar': typeof CalendarRoute
+  '/contact': typeof ContactRoute
+  '/desk': typeof DeskRoute
   '/inquire': typeof InquireRoute
   '/login': typeof LoginRoute
+  '/markets': typeof MarketsRoute
+  '/privacy': typeof PrivacyRoute
+  '/research': typeof ResearchRoute
+  '/risk': typeof RiskRoute
+  '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/academy': typeof AcademyRoute
+  '/admin': typeof AdminRoute
   '/approach': typeof ApproachRoute
+  '/calendar': typeof CalendarRoute
+  '/contact': typeof ContactRoute
+  '/desk': typeof DeskRoute
   '/inquire': typeof InquireRoute
   '/login': typeof LoginRoute
+  '/markets': typeof MarketsRoute
+  '/privacy': typeof PrivacyRoute
+  '/research': typeof ResearchRoute
+  '/risk': typeof RiskRoute
+  '/signup': typeof SignupRoute
+  '/terms': typeof TermsRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/approach' | '/inquire' | '/login' | '/api/auth/$'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/admin'
+    | '/approach'
+    | '/calendar'
+    | '/contact'
+    | '/desk'
+    | '/inquire'
+    | '/login'
+    | '/markets'
+    | '/privacy'
+    | '/research'
+    | '/risk'
+    | '/signup'
+    | '/terms'
+    | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/approach' | '/inquire' | '/login' | '/api/auth/$'
-  id: '__root__' | '/' | '/approach' | '/inquire' | '/login' | '/api/auth/$'
+  to:
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/admin'
+    | '/approach'
+    | '/calendar'
+    | '/contact'
+    | '/desk'
+    | '/inquire'
+    | '/login'
+    | '/markets'
+    | '/privacy'
+    | '/research'
+    | '/risk'
+    | '/signup'
+    | '/terms'
+    | '/api/auth/$'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/academy'
+    | '/admin'
+    | '/approach'
+    | '/calendar'
+    | '/contact'
+    | '/desk'
+    | '/inquire'
+    | '/login'
+    | '/markets'
+    | '/privacy'
+    | '/research'
+    | '/risk'
+    | '/signup'
+    | '/terms'
+    | '/api/auth/$'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AcademyRoute: typeof AcademyRoute
+  AdminRoute: typeof AdminRoute
   ApproachRoute: typeof ApproachRoute
+  CalendarRoute: typeof CalendarRoute
+  ContactRoute: typeof ContactRoute
+  DeskRoute: typeof DeskRoute
   InquireRoute: typeof InquireRoute
   LoginRoute: typeof LoginRoute
+  MarketsRoute: typeof MarketsRoute
+  PrivacyRoute: typeof PrivacyRoute
+  ResearchRoute: typeof ResearchRoute
+  RiskRoute: typeof RiskRoute
+  SignupRoute: typeof SignupRoute
+  TermsRoute: typeof TermsRoute
   ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
@@ -88,11 +260,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/academy': {
+      id: '/academy'
+      path: '/academy'
+      fullPath: '/academy'
+      preLoaderRoute: typeof AcademyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/approach': {
       id: '/approach'
       path: '/approach'
       fullPath: '/approach'
       preLoaderRoute: typeof ApproachRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calendar': {
+      id: '/calendar'
+      path: '/calendar'
+      fullPath: '/calendar'
+      preLoaderRoute: typeof CalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/desk': {
+      id: '/desk'
+      path: '/desk'
+      fullPath: '/desk'
+      preLoaderRoute: typeof DeskRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/inquire': {
@@ -109,6 +323,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/markets': {
+      id: '/markets'
+      path: '/markets'
+      fullPath: '/markets'
+      preLoaderRoute: typeof MarketsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/risk': {
+      id: '/risk'
+      path: '/risk'
+      fullPath: '/risk'
+      preLoaderRoute: typeof RiskRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/auth/$': {
       id: '/api/auth/$'
       path: '/api/auth/$'
@@ -121,9 +377,21 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AcademyRoute: AcademyRoute,
+  AdminRoute: AdminRoute,
   ApproachRoute: ApproachRoute,
+  CalendarRoute: CalendarRoute,
+  ContactRoute: ContactRoute,
+  DeskRoute: DeskRoute,
   InquireRoute: InquireRoute,
   LoginRoute: LoginRoute,
+  MarketsRoute: MarketsRoute,
+  PrivacyRoute: PrivacyRoute,
+  ResearchRoute: ResearchRoute,
+  RiskRoute: RiskRoute,
+  SignupRoute: SignupRoute,
+  TermsRoute: TermsRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
 }
 export const routeTree = rootRouteImport

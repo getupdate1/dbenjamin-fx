@@ -3,7 +3,7 @@ import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Aether Capital";
+const APP_NAME = "D.BENJAMIN FX";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -11,8 +11,8 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "description", content: "Aether Capital — clarity in every decision. Strength in every portfolio." },
-      { name: "theme-color", content: "#12161c" },
+      { name: "description", content: "D Benjamin FX — a private foreign-exchange and capital desk." },
+      { name: "theme-color", content: "#070708" },
     ],
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
@@ -23,7 +23,7 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,480;9..144,560&family=Outfit:wght@360;480;560&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap",
       },
     ],
   }),

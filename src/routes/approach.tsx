@@ -1,49 +1,46 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { MarketBoard } from "@/components/market-board";
 import { Shell } from "@/components/site-shell";
 
-export const Route = createFileRoute("/approach")({ component: Approach });
+export const Route = createFileRoute("/approach")({ component: Markets });
 
-const steps = [
-  { n: "I", title: "Listen", body: "We start with the constraint: liquidity, time horizon, what must not be lost." },
-  { n: "II", title: "Design", body: "A written mandate — what we own, what we refuse, and how we report." },
-  { n: "III", title: "Hold", body: "We underwrite slowly and sell for reasons we can put in a letter." },
+const rows = [
+  ["Majors", "EUR, GBP, JPY, CHF, CAD, AUD — expressed as spot or short-dated forwards."],
+  ["Selective EM", "Only where we can name the liquidity and the exit. No basket products."],
+  ["Capital", "Reserves and a short list of holdings. Concentration is a feature, not a lapse."],
 ];
 
-function Approach() {
+function Markets() {
   return (
     <Shell>
-      <main className="mx-auto max-w-6xl px-5 py-14 md:py-20">
-        <p className="text-xs tracking-[0.22em] text-gold-deep uppercase">Approach</p>
-        <h1 className="mt-3 max-w-3xl font-serif text-5xl leading-tight">Fewer decisions. Better ones.</h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted">
-          Aether is not a product shelf. We run a small number of strategies for people who prefer
-          a named partner to a call center.
-        </p>
-        <ol className="mt-12 grid gap-6 md:grid-cols-3">
-          {steps.map((s) => (
-            <li key={s.n} className="rounded-2xl border border-line bg-surface p-6">
-              <p className="font-serif text-gold-deep">{s.n}</p>
-              <h2 className="mt-3 font-serif text-2xl">{s.title}</h2>
-              <p className="mt-2 text-muted">{s.body}</p>
-            </li>
+      <main className="mx-auto max-w-7xl px-5 py-16 md:py-20">
+        <p className="text-[11px] tracking-[0.28em] text-gold uppercase">The book</p>
+        <h1 className="mt-3 max-w-3xl font-serif text-5xl leading-tight md:text-6xl">What the desk will and will not touch.</h1>
+        <div className="mt-12 divide-y divide-line border-y border-line">
+          {rows.map(([title, body]) => (
+            <div key={title} className="grid gap-3 py-6 md:grid-cols-12 md:items-baseline">
+              <h2 className="font-serif text-3xl md:col-span-4">{title}</h2>
+              <p className="text-muted md:col-span-8">{body}</p>
+            </div>
           ))}
-        </ol>
-        <section className="mt-14 grid gap-8 border-t border-line pt-10 md:grid-cols-2">
-          <div>
-            <h2 className="font-serif text-3xl">What we will not do</h2>
-            <ul className="mt-4 space-y-3 text-muted">
-              <li>Promise a return, a ranking, or a “guaranteed” outcome.</li>
-              <li>Sell products we do not underwrite ourselves.</li>
-              <li>Hide fees inside a performance footnote.</li>
+        </div>
+        <MarketBoard layout="table" />
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="border border-line p-8">
+            <h2 className="font-serif text-3xl">Refusals</h2>
+            <ul className="mt-4 space-y-2 text-muted">
+              <li>No guaranteed rates, pips targets, or “signals.”</li>
+              <li>No leveraged products sold as income.</li>
+              <li>No anonymous chat-room execution.</li>
             </ul>
           </div>
-          <div className="rounded-2xl bg-ink p-8 text-bg">
-            <p className="font-serif text-2xl leading-snug">If the fit is right, the next step is a short written inquiry.</p>
-            <Link to="/inquire" className="mt-6 inline-flex rounded-full bg-bg px-5 py-3 text-ink">
-              Write to the partnership
+          <div className="bg-gold p-8 text-bg">
+            <p className="font-serif text-3xl leading-snug">If the mandate fits, the next step is a registered inquiry.</p>
+            <Link to="/inquire" className="mt-6 inline-block bg-bg px-5 py-3 text-[13px] tracking-wide text-ink uppercase">
+              Write to the desk
             </Link>
           </div>
-        </section>
+        </div>
       </main>
     </Shell>
   );

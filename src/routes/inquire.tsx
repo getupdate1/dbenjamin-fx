@@ -12,7 +12,7 @@ function InquirePage() {
   return (
     <Shell>
       <main className="mx-auto max-w-6xl px-5 py-14 md:py-20">
-        <p className="text-xs tracking-[0.22em] text-gold-deep uppercase">Support</p>
+        <p className="text-xs tracking-[0.22em] text-gold uppercase">Support</p>
         <h1 className="mt-3 font-serif text-5xl">Write to the partnership.</h1>
         <p className="mt-4 max-w-xl text-muted">
           Registered clients and prospective partners can leave a note here. We reply by email.
@@ -32,7 +32,7 @@ function RegisterPrompt() {
     <div className="max-w-md rounded-2xl border border-line bg-surface p-8">
       <p className="font-serif text-2xl">Register to send a note.</p>
       <p className="mt-2 text-muted">Your messages stay attached to your account.</p>
-      <a href="/login" className="mt-6 inline-flex rounded-full bg-ink px-5 py-3 text-bg">
+      <a href="/login" className="mt-6 inline-flex rounded-full bg-gold text-bg">
         Create an account
       </a>
     </div>
@@ -109,8 +109,8 @@ function InquiryDesk() {
             placeholder="What would you like us to know?"
           />
         </label>
-        {error && <p className="text-sm text-gold-deep">{error}</p>}
-        <button type="submit" disabled={busy} className="rounded-full bg-ink px-5 py-3 text-bg disabled:opacity-60">
+        {error && <p className="text-sm text-gold">{error}</p>}
+        <button type="submit" disabled={busy} className="rounded-full bg-gold text-bg disabled:opacity-60">
           {busy ? "Sending…" : "Send inquiry"}
         </button>
       </form>
@@ -124,7 +124,7 @@ function InquiryDesk() {
           <ul className="mt-4 space-y-3">
             {rows.map((r) => (
               <li key={r.id} className="rounded-2xl border border-line bg-surface p-4">
-                <p className="text-xs tracking-wide text-gold-deep uppercase">{r.topic}</p>
+                <p className="text-xs tracking-wide text-gold uppercase">{r.topic}</p>
                 <p className="mt-1 font-medium">{r.name}</p>
                 <p className="mt-2 text-sm text-muted">{r.message}</p>
               </li>
